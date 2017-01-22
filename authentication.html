@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Authentication</title>
+	<link rel="stylesheet" type="text/css" href=css/bootstrap.min.css >
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css">
+
+
+
+</head>
+
+<body>
+
+	<div class="container" style="padding-top: 150px">
+		<h1>Authenticate</h1>
+		<div >
+			<input type="text" class="form-control content" placeholder="Username">
+		</div>
+		<div>
+			<input type="text" class="form-control content" placeholder="Password">
+		</div>
+		<div>
+			<button type="button" class="btn btn-lg pull-right contentButton">Enter</button>
+		</div>
+
+	</div>
+	<div class="container" style="padding-top: 100px">
+
+		<h1>Password Generator</h1>
+		<div class="contentButton2">
+			<button type="button" class="btn goButton" onclick="password_get('randomPassword');">Go!</button>
+		
+		<span id="randomPassword" style="font: Consolas font-size: 50px; padding-left: 37px">
+			
+		</span>
+		</div>
+
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+	function toggle_visibility(id) {
+		var e = document.getElementById(id);
+		if(e.style.display == 'block')
+			e.style.display = 'none';
+		else
+			e.style.display = 'block';
+	}
+	</script>
+<script type="text/javascript">
+	function password_get(id) {
+		var password = password_generator();
+		document.getElementById("randomPassword").innerHTML = password; 
+
+	} 
+	</script>
+<script type="text/javascript">
+	function password_generator() {
+		var characterArray = ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","U","V","W","X","Y","Z"];
+		var pArray = [];
+		for (i = 0; i < 7; i++) { 
+			const randomCharacterIndex = Math.floor(Math.random() * 59);
+			pArray.push(characterArray[randomCharacterIndex]);
+		}
+
+		const password = pArray[0].concat(pArray[1],pArray[2],pArray[3],pArray[4],pArray[5],pArray[6]);
+		return password;
+	}
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

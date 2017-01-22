@@ -1,0 +1,28 @@
+body {
+	margin: 0px;
+	background-color: rgb(35,35,35);
+	font-family: Helvetica Neue, Helvetica;
+	color: white; 
+}
+
+body .content {
+	margin: 5px;
+} 
+body .contentButton {
+	margin: 5px 0px 0px 0px;
+	background: rgb(43,43,43);
+}
+body .contentButton2 {
+	padding-left: 10px
+}
+h1 {
+	padding: 8px;
+	align-content: center;
+	margin: 0px;
+
+}
+body .goButton {
+	padding: 5px 40px;
+	background: rgb(43,43,43);
+	font-size: 18px;
+}
