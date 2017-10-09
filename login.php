@@ -2,7 +2,7 @@
 $hn = 'localhost'; 
 $db = 'login'; 
 $un = 'Aaron'; 
-$pw = 'Barefoot25'; 
+$pw = 'Bef3f87t25'; 
 
 
 ?>
