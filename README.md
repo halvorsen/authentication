@@ -1,2 +1,2 @@
 # authentication
-# login for personal website
+# login & database save for personal website
